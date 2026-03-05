@@ -209,6 +209,25 @@
         </div>
       </div>
 
+      <!-- Price Monitor -->
+      <div class="project-card">
+        <div class="project-thumb">📈</div>
+        <div class="project-body">
+          <div class="project-title">Price Monitor</div>
+          <div class="project-desc">Herramienta en Python para rastrear precios de cualquier producto en internet y recibir alertas por email cuando bajan del objetivo.</div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">SQLite</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" onclick="openModal('modal-price')">→ Ver más</a>
+            <a href="#" class="project-link">→ GitHub</a>
+          </div>
+        </div>
+      </div>
+
       <!-- Próximamente -->
       <div class="project-card">
         <div class="project-thumb">🚀</div>
@@ -235,8 +254,7 @@
       <a href="mailto:jorgebv2003@gmail.com" class="btn btn-primary" style="display:inline-block;margin-bottom:2rem">✉️ Envíame un email</a>
       <div class="social-links">
         <a href="https://github.com/jorgebv2003-cloud" class="social-link" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/tuusuario" class="social-link" target="_blank">LinkedIn</a>
-        <a href="https://twitter.com/tuusuario" class="social-link" target="_blank">X / Twitter</a>
+        <a href="https://www.linkedin.com/in/jorge-bautista-a8b670202/" class="social-link" target="_blank">LinkedIn</a>
       </div>
     </div>
   </section>
@@ -244,6 +262,47 @@
   <footer>
     <p>Diseñado y construido por <strong>Jorge Bautista Vidriales</strong> · 2026</p>
   </footer>
+
+  <!-- MODAL PRICE MONITOR -->
+  <div class="modal-overlay" id="modal-price">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('modal-price')">✕</button>
+      <h2>📈 Price Monitor</h2>
+      <div class="modal-subtitle">Herramienta de monitorización de precios · En desarrollo local</div>
+      <p>
+        Aplicación en Python para rastrear el precio de cualquier producto en internet y recibir
+        una alerta por email automáticamente cuando baja del precio objetivo. La idea surgió de
+        querer saber cuándo comprar sin tener que estar revisando las webs manualmente.
+      </p>
+      <p>
+        Construida completamente en Python, usa Playwright para extraer precios de cualquier web
+        de forma genérica, SQLite para guardar el historial y APScheduler para automatizar las
+        revisiones cada 30 minutos. Incluye un dashboard interactivo con Streamlit donde se pueden
+        añadir productos y ver la evolución del precio en gráficas.
+      </p>
+      <h4>¿Qué permite hacer?</h4>
+      <ul>
+        <li><strong>Productos</strong> — añadir cualquier producto con URL y precio objetivo</li>
+        <li><strong>Historial</strong> — registro de todos los precios detectados a lo largo del tiempo</li>
+        <li><strong>Alertas</strong> — email automático cuando el precio baja del objetivo</li>
+        <li><strong>Dashboard</strong> — gráfica de evolución del precio y métricas por producto</li>
+      </ul>
+      <h4>Tecnologías</h4>
+      <div class="modal-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Playwright</span>
+        <span class="tag">SQLite</span>
+        <span class="tag">APScheduler</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">Plotly</span>
+        <span class="tag">SMTP</span>
+        <span class="tag">python-dotenv</span>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-outline">→ GitHub</a>
+      </div>
+    </div>
+  </div>
 
   <!-- MODAL GYMTRACKER -->
   <div class="modal-overlay" id="modal-gym">
