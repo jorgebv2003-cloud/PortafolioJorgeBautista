@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -63,7 +64,7 @@
     .project-tags { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1rem; }
     .tag { padding: .2rem .6rem; border-radius: 999px; font-size: .7rem; font-weight: 600; background: rgba(124,58,237,.15); color: var(--accent); border: 1px solid rgba(124,58,237,.3); }
     .project-links { display: flex; gap: .75rem; }
-    .project-link { font-size: .8rem; font-weight: 600; color: var(--accent2); text-decoration: none; transition: opacity var(--transition); }
+    .project-link { font-size: .8rem; font-weight: 600; color: var(--accent2); text-decoration: none; transition: opacity var(--transition); cursor: pointer; }
     .project-link:hover { opacity: .7; }
 
     .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 3rem; text-align: center; }
@@ -82,10 +83,9 @@
       .nav-links { gap: 1rem; }
       .about-grid { grid-template-columns: 1fr; }
       .contact-card { padding: 2rem 1.25rem; }
-
     }
 
-    /* MODAL */
+    /* ── MODAL ── */
     .modal-overlay {
       display: none; position: fixed; inset: 0; z-index: 200;
       background: rgba(0,0,0,.7); backdrop-filter: blur(6px);
@@ -108,7 +108,7 @@
     .modal p { color: var(--muted); font-size: .9rem; margin-bottom: 1rem; }
     .modal h4 { font-size: .85rem; font-weight: 700; margin-bottom: .75rem; margin-top: 1.5rem; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); }
     .modal ul { list-style: none; display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1rem; }
-    .modal ul li { color: var(--muted); font-size: .875rem; padding-left: 1rem; position: relative; }
+    .modal ul li { color: var(--muted); font-size: .875rem; padding-left: 1.25rem; position: relative; }
     .modal ul li::before { content: "→"; position: absolute; left: 0; color: var(--accent2); }
     .modal-tags { display: flex; gap: .5rem; flex-wrap: wrap; margin: 1rem 0; }
     .modal-footer { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
@@ -129,7 +129,7 @@
   <section id="hero">
     <span class="hero-tag">👋 Disponible para trabajar</span>
     <h1>Hola, soy<br><span class="gradient-text">Jorge</span></h1>
-    <p>Estudiante de Ingenieria Informática apasionado por construir cosas que funcionen, sean útiles y estén bien hechas. Siempre aprendiendo.</p>
+    <p>Estudiante de Ingeniería Informática apasionado por construir cosas que funcionen, sean útiles y estén bien hechas. Siempre aprendiendo.</p>
     <div class="btn-group">
       <a href="#projects" class="btn btn-primary">Ver proyectos</a>
       <a href="#contact" class="btn btn-outline">Contactar</a>
@@ -141,11 +141,11 @@
     <h2 class="section-title">¿Quién soy?</h2>
     <div class="divider"></div>
     <div class="about-grid">
-      <img src="foto.jpg" alt="Jorge Bautista" class="about-avatar" style="object-fit: cover;" />
+      <img src="foto.JPG" alt="Jorge Bautista" class="about-avatar" style="object-fit: cover;" />
       <div class="about-text">
-        <p>Soy un estudiante de Ingenieria Informática en la Universidad Pontificia de Salamanca.</p>
+        <p>Soy un estudiante de Ingeniería Informática en la Universidad Pontificia de Salamanca.</p>
         <p>Actualmente estoy construyendo este portafolio de proyectos para crecer profesionalmente y explorar distintas áreas del desarrollo.</p>
-        <p>Me gusta estar actualizado en las ultimas tecnologías.</p>
+        <p>Me gusta estar actualizado en las últimas tecnologías.</p>
         <br>
         <a href="cv.pdf" download="CV_Jorge_Bautista.pdf" class="btn btn-outline" style="display:inline-block">⬇️ Descargar CV</a>
       </div>
@@ -165,6 +165,8 @@
       <div class="skill-card"><span class="skill-icon">🐙</span><div class="skill-name">GitHub</div><div class="skill-level">Básico</div></div>
       <div class="skill-card"><span class="skill-icon">🗄️</span><div class="skill-name">SQL</div><div class="skill-level">Básico</div></div>
       <div class="skill-card"><span class="skill-icon">💻</span><div class="skill-name">Terminal</div><div class="skill-level">Básico</div></div>
+      <div class="skill-card"><span class="skill-icon">⚛️</span><div class="skill-name">React</div><div class="skill-level">Intermedio</div></div>
+      <div class="skill-card"><span class="skill-icon">🔥</span><div class="skill-name">Firebase</div><div class="skill-level">Intermedio</div></div>
     </div>
   </section>
 
@@ -173,33 +175,53 @@
     <h2 class="section-title">Lo que he construido</h2>
     <div class="divider"></div>
     <div class="projects-grid">
+
+      <!-- Portafolio -->
       <div class="project-card">
         <div class="project-thumb">🌍</div>
         <div class="project-body">
           <div class="project-title">Este Portafolio</div>
           <div class="project-desc">Portafolio personal construido desde cero con HTML, CSS y JS puro. Responsive y con animaciones.</div>
           <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
-          <div class="project-links"><a href="#" class="project-link">→ Ver demo</a><a href="#" class="project-link">→ GitHub</a></div>
+          <div class="project-links">
+            <a href="https://jorgebv2003-cloud.github.io/PortafolioJorgeBautista" class="project-link" target="_blank">→ Ver demo</a>
+            <a href="https://github.com/jorgebv2003-cloud/PortafolioJorgeBautista" class="project-link" target="_blank">→ GitHub</a>
+          </div>
         </div>
       </div>
+
+      <!-- GymTrackerApp -->
       <div class="project-card">
-        <div class="project-thumb">📝</div>
+        <div class="project-thumb">💪</div>
         <div class="project-body">
-          <div class="project-title">Proyecto 2</div>
-          <div class="project-desc">Descripción breve de tu segundo proyecto. Qué hace, por qué lo construiste, qué aprendiste.</div>
-          <div class="project-tags"><span class="tag">Python</span><span class="tag">API</span></div>
-          <div class="project-links"><a href="#" class="project-link">→ Ver demo</a><a href="#" class="project-link">→ GitHub</a></div>
+          <div class="project-title">GymTrackerApp</div>
+          <div class="project-desc">PWA de seguimiento de entrenamiento con biblioteca de ejercicios, historial, métricas corporales y gráficas de progreso.</div>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Vite</span>
+            <span class="tag">PWA</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" onclick="openModal('modal-gym')">→ Ver más</a>
+            <a href="https://gym-jorge-tracker.web.app" class="project-link" target="_blank">→ Demo</a>
+          </div>
         </div>
       </div>
+
+      <!-- Próximamente -->
       <div class="project-card">
         <div class="project-thumb">🚀</div>
         <div class="project-body">
           <div class="project-title">Próximamente</div>
           <div class="project-desc">Siempre trabajando en algo nuevo. Sígueme en GitHub para ver mis avances en tiempo real.</div>
           <div class="project-tags"><span class="tag">En progreso</span></div>
-          <div class="project-links"><a href="#" class="project-link">→ GitHub</a></div>
+          <div class="project-links">
+            <a href="https://github.com/jorgebv2003-cloud" class="project-link" target="_blank">→ GitHub</a>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -212,7 +234,7 @@
       <p>Estoy abierto a oportunidades, colaboraciones y simplemente a conocer gente interesante del sector.</p>
       <a href="mailto:jorgebv2003@gmail.com" class="btn btn-primary" style="display:inline-block;margin-bottom:2rem">✉️ Envíame un email</a>
       <div class="social-links">
-        <a href="https://github.com/tuusuario" class="social-link" target="_blank">GitHub</a>
+        <a href="https://github.com/jorgebv2003-cloud" class="social-link" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/tuusuario" class="social-link" target="_blank">LinkedIn</a>
         <a href="https://twitter.com/tuusuario" class="social-link" target="_blank">X / Twitter</a>
       </div>
@@ -220,15 +242,79 @@
   </section>
 
   <footer>
-    <p>Diseñado y construido por <strong>Jorge Bautista Vidriales</strong> · 2026 ·</p>
+    <p>Diseñado y construido por <strong>Jorge Bautista Vidriales</strong> · 2026</p>
   </footer>
 
+  <!-- MODAL GYMTRACKER -->
+  <div class="modal-overlay" id="modal-gym">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('modal-gym')">✕</button>
+      <h2>💪 GymTrackerApp</h2>
+      <div class="modal-subtitle">PWA de seguimiento de entrenamiento · En producción</div>
+      <p>
+        Aplicación web progresiva (PWA) para llevar un control completo de entrenamientos en el gimnasio.
+        La idea surgió de la necesidad de tener una herramienta propia, sencilla y siempre disponible
+        desde el móvil, sin depender de apps de terceros.
+      </p>
+      <p>
+        Construida con React + Vite en el frontend y Firebase como backend en la nube, lo que permite
+        almacenar y sincronizar datos en tiempo real sin necesidad de montar un servidor propio.
+        Al ser una PWA, se puede instalar directamente en el móvil como si fuera una app nativa.
+      </p>
+      <h4>¿Qué permite hacer?</h4>
+      <ul>
+        <li><strong>Ejercicios</strong> — biblioteca organizada por grupo muscular con registro de series, repeticiones y peso</li>
+        <li><strong>Historial</strong> — todas las sesiones ordenadas por fecha</li>
+        <li><strong>Métricas</strong> — medidas corporales y calculadora de IMC diferenciada por sexo</li>
+        <li><strong>Progreso</strong> — gráficas de evolución por ejercicio y récords personales</li>
+      </ul>
+      <h4>Tecnologías</h4>
+      <div class="modal-tags">
+        <span class="tag">React</span>
+        <span class="tag">Vite</span>
+        <span class="tag">Firebase Firestore</span>
+        <span class="tag">Firebase Auth</span>
+        <span class="tag">Firebase Hosting</span>
+        <span class="tag">Recharts</span>
+        <span class="tag">PWA</span>
+      </div>
+      <div class="modal-footer">
+        <a href="https://gym-jorge-tracker.web.app" target="_blank" class="btn btn-primary">→ Ver app en vivo</a>
+        <a href="#" class="btn btn-outline">→ GitHub</a>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // Animaciones fade-in
     const observer = new IntersectionObserver(
       entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
       { threshold: 0.1 }
     );
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Modal
+    function openModal(id) {
+      document.getElementById(id).classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    // Cerrar al hacer clic fuera del modal
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', e => {
+        if (e.target === overlay) closeModal(overlay.id);
+      });
+    });
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m.id));
+      }
+    });
   </script>
+
 </body>
 </html>
